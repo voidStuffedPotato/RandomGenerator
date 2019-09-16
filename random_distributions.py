@@ -131,7 +131,7 @@ class Neumann(Randomizer):
 class CLT(Randomizer):
     def __init__(self, mean, variance, iterations=50000):
         self.iterations = iterations
-        super().__init__(Style.ITALIC + f'Центральная предельная теорема' + Style.END)
+        super().__init__(Style.ITALIC + 'Центральная предельная теорема' + Style.END)
         self.mean_ = mean
         self.variance_ = variance
         self.transform()
@@ -154,7 +154,7 @@ class Normal(Randomizer):
         self.iterations = iterations
         self.mean_ = mean
         self.stdev_ = stdev
-        super().__init__(Style.ITALIC + f'Нормальное распределение' + Style.END)
+        super().__init__(Style.ITALIC + 'Нормальное распределение' + Style.END)
 
     def get_randoms(self):
         return normal(self.mean_, self.stdev_, self.iterations)
